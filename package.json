@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "zip": "cd dist; zip -r ../lambda.zip .; cd ..",
+    "update": "aws lambda update-function-code --zip-file fileb://lambda.zip --function-name kims-opd-generator",
+    "push": "run-s build zip update"
+  },
+  "devDependencies": {
+    "npm-run-all2": "^6.1.1",
+    "tsc": "^2.0.4"
+  },
+  "dependencies": {
+    "typescript": "^5.4.5"
+  }
+}
