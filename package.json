@@ -11,6 +11,7 @@
     "tsc": "^2.0.4"
   },
   "dependencies": {
+    "moment-timezone": "^0.5.45",
     "typescript": "^5.4.5"
   }
 }
